@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kuis Hewan</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4CAF50">
+  <link rel="icon" href="icon-192.png" type="image/png">
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 20px; background-color: #e0f7fa; }
+    img { width: 250px; height: 250px; object-fit: contain; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); margin: 20px auto; display: block; }
+    button { margin: 5px; padding: 10px 20px; font-size: 16px; border-radius: 10px; border: none; background-color: #81c784; color: white; cursor: pointer; }
+    button:hover { background-color: #66bb6a; }
+    #lives { font-size: 24px; color: red; margin: 10px 0; }
+  </style>
+</head>
+<body>
+  <h1>Kuis Tebak Nama Hewan</h1>
+  <div id="score"></div>
+  <div id="lives"></div>
+  <img id="animalImage" src="" alt="Gambar Hewan">
+  <div id="optionsContainer"></div>
+  <script src="index.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker Registered'));
+    }
+  </script>
+</body>
+</html>
